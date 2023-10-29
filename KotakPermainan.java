@@ -3,7 +3,8 @@ import java.util.Collections;
 import java.util.Random;
 
 /**
- * Kelas KotakPermainan digunakan untuk merepresentasikan permainan dengan kotak-kotak
+ * Kelas KotakPermainan digunakan untuk merepresentasikan permainan dengan
+ * kotak-kotak
  * yang berisi koin dan monster.
  */
 class KotakPermainan {
@@ -21,14 +22,15 @@ class KotakPermainan {
     /**
      * Konstruktor untuk kelas KotakPermainan.
      *
-     * @param jumKotak Jumlah kotak dalam permainan.
-     * @param jumlahKoin Jumlah koin dalam permainan.
+     * @param jumKotak      Jumlah kotak dalam permainan.
+     * @param jumlahKoin    Jumlah koin dalam permainan.
      * @param jumlahMonster Jumlah monster dalam permainan.
-     * @param pilihanLevel Tingkatan kesulitan permainan.
-     * @param monster Objek monster yang digunakan dalam permainan.
-     * @param koin Objek koin yang digunakan dalam permainan.
+     * @param pilihanLevel  Tingkatan kesulitan permainan.
+     * @param monster       Objek monster yang digunakan dalam permainan.
+     * @param koin          Objek koin yang digunakan dalam permainan.
      */
-    public KotakPermainan(int jumKotak, int jumlahKoin, int jumlahMonster, int pilihanLevel, Monster monster, Koin koin) {
+    public KotakPermainan(int jumKotak, int jumlahKoin, int jumlahMonster, int pilihanLevel, Monster monster,
+            Koin koin) {
         this.jumKotak = jumKotak;
         this.jumlahKoin = jumlahKoin;
         this.jumlahMonster = jumlahMonster;
