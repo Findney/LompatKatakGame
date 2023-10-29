@@ -87,15 +87,15 @@ public class LompatKatak {
 
             // Memulai permainan lompat katak
             while (katak.getSkor() >= 0 && katak.getPosisi() < permainan.getJumKotak()) {
-                System.out.println("\n+-------------------------------------+");
-                System.out.println("|        Permainan Lompat Katak       |");
-                System.out.println("+-------------------------------------+");
+                System.out.println("\n+--------------------------------------------+");
+                System.out.println("|           Permainan Lompat Katak           |");
+                System.out.println("+--------------------------------------------+");
                 System.out.println(" Nama Pemain: " + namaPemain);
                 System.out.println(" Level: " + pemain.getNamaLevel(pilihanLevel));
-                System.out.println("---------------------------------------");
+                System.out.println("----------------------------------------------");
                 System.out.println(" Posisi Katak: " + katak.getPosisi());
                 System.out.println(" Nilai Katak: " + katak.getSkor());
-                System.out.println("+-------------------------------------+");
+                System.out.println("----------------------------------------------");
 
                 // Menentukan pilihan arah
                 if (katak.getPosisi() == 0) {
@@ -105,7 +105,7 @@ public class LompatKatak {
                     System.out.println(" Pilih arah pergerakan katak:");
                     System.out.println(" 1. Maju");
                     System.out.println(" 2. Mundur");
-                    System.out.println("+-------------------------------------+");
+                    System.out.println("----------------------------------------------");
 
                     System.out.print("Masukkan pilihan arah pergerakan: ");
                     katak.setPilihanArah(input.nextInt());
@@ -129,6 +129,8 @@ public class LompatKatak {
                 // Meminta jumlah kotak yang akan dilewati
                 System.out.print("Masukkan jumlah kotak yang ingin dilewati: ");
                 permainan.setJumlahLompatan(input.nextInt());
+                System.out.println("+--------------------------------------------+");
+
 
                 // Validasi jumlah lompatan
                 while (permainan.getJumlahLompatan() < 1 || permainan.getJumlahLompatan() > 2) {
