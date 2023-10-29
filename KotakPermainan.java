@@ -2,7 +2,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-// Kelas KotakPermainan
+/**
+ * Kelas KotakPermainan digunakan untuk merepresentasikan permainan dengan kotak-kotak
+ * yang berisi koin dan monster.
+ */
 class KotakPermainan {
     private Kotak[] boardGame;
     private int jumKotak;
@@ -15,6 +18,16 @@ class KotakPermainan {
     private Monster monster;
     private Koin koin;
 
+    /**
+     * Konstruktor untuk kelas KotakPermainan.
+     *
+     * @param jumKotak Jumlah kotak dalam permainan.
+     * @param jumlahKoin Jumlah koin dalam permainan.
+     * @param jumlahMonster Jumlah monster dalam permainan.
+     * @param pilihanLevel Tingkatan kesulitan permainan.
+     * @param monster Objek monster yang digunakan dalam permainan.
+     * @param koin Objek koin yang digunakan dalam permainan.
+     */
     public KotakPermainan(int jumKotak, int jumlahKoin, int jumlahMonster, int pilihanLevel, Monster monster, Koin koin) {
         this.jumKotak = jumKotak;
         this.jumlahKoin = jumlahKoin;
@@ -23,13 +36,16 @@ class KotakPermainan {
         acakKoin = new int[jumlahKoin];
         acakMonster = new int[jumlahMonster];
         this.pilihanLevel = pilihanLevel;
-        this.monster = monster; 
+        this.monster = monster;
         this.koin = koin;
 
         generateAcak();
         inisialisasiKotak();
     }
 
+    /**
+     * Menghasilkan indeks acak untuk koin dan monster dalam permainan.
+     */
     private void generateAcak() {
         ArrayList<Integer> koinList = new ArrayList<>();
         ArrayList<Integer> monsterList = new ArrayList<>();
@@ -51,10 +67,12 @@ class KotakPermainan {
         }
     }
 
+    /**
+     * Menginisialisasi kotak-kotak dalam permainan dengan koin dan monster.
+     */
     private void inisialisasiKotak() {
         for (int i = 0; i < jumKotak; i++) {
             Kotak kotak = new Kotak();
-
 
             for (int j = 0; j < jumlahKoin; j++) {
                 if (i == acakKoin[j]) {
@@ -77,7 +95,13 @@ class KotakPermainan {
             boardGame[i] = kotak;
         }
     }
-    
+
+    /**
+     * Menghasilkan nilai koin berdasarkan tingkatan kesulitan.
+     *
+     * @param pilihanLevel Tingkatan kesulitan permainan.
+     * @return Nilai koin yang dihasilkan.
+     */
     private int generateNilaiKoin(int pilihanLevel) {
         Random rand = new Random();
         int nilai = 0;
@@ -99,6 +123,12 @@ class KotakPermainan {
         return nilai;
     }
 
+    /**
+     * Menghasilkan nilai monster berdasarkan tingkatan kesulitan.
+     *
+     * @param pilihanLevel Tingkatan kesulitan permainan.
+     * @return Nilai monster yang dihasilkan.
+     */
     private int generateNilaiMonster(int pilihanLevel) {
         Random rand = new Random();
         int nilai = 0;
@@ -120,39 +150,59 @@ class KotakPermainan {
         return nilai;
     }
 
+    /**
+     * Mengembalikan total skor dari kotak pada posisi tertentu dalam permainan.
+     *
+     * @param posisi Posisi kotak dalam permainan.
+     * @return Total skor dari kotak pada posisi tersebut.
+     */
     public int contain(int posisi) {
         if (posisi >= 0 && posisi < jumKotak) {
             Kotak kotak = boardGame[posisi];
             int skor = 0;
-    
+
             if (kotak.isThereKoin()) {
                 Koin koin = kotak.getKoin();
-                int nilaiKoin = koin.getNilai(); 
+                int nilaiKoin = koin.getNilai();
                 skor += nilaiKoin;
             }
-    
+
             if (kotak.isThereMonster()) {
                 Monster monster = kotak.getMonster();
                 int nilaiMonster = monster.getNilai();
-                
+
                 skor += nilaiMonster;
             }
-    
-            
+
             return skor;
         }
-    
+
         return 0;
     }
-    
+
+    /**
+     * Mendapatkan jumlah kotak dalam permainan.
+     *
+     * @return Jumlah kotak dalam permainan.
+     */
     public int getJumKotak() {
         return this.jumKotak;
     }
 
+    /**
+     * Mendapatkan jumlah lompatan dalam permainan.
+     *
+     * @return Jumlah lompatan dalam permainan.
+     */
     public int getJumlahLompatan() {
         return this.jumlahLompatan;
     }
 
+    /**
+     * Mengatur jumlah lompatan dalam permainan.
+     *
+     * @param jumBaru Jumlah lompatan yang baru.
+     */
     public void setJumlahLompatan(int jumBaru) {
         this.jumlahLompatan = jumBaru;
     }
