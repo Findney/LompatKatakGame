@@ -1,5 +1,6 @@
 /**
- * Kelas Kotak mewakili sebuah kotak dalam sebuah permainan. Kotak ini dapat berisi sebuah Koin
+ * Kelas Kotak mewakili sebuah kotak dalam sebuah permainan. Kotak ini dapat
+ * berisi sebuah Koin
  * dan/atau sebuah Monster.
  */
 public class Kotak {
@@ -7,7 +8,8 @@ public class Kotak {
     private Monster monster;
 
     /**
-     * Konstruktor default untuk kelas Kotak. Inisialisasi kotak tanpa Koin dan Monster.
+     * Konstruktor default untuk kelas Kotak. Inisialisasi kotak tanpa Koin dan
+     * Monster.
      */
     public Kotak() {
         // Konstruktor default
