@@ -60,13 +60,13 @@ public class Koin {
      */
     public String getJenisKoinByNilai(int nilai) {
         if (nilai >= 1 && nilai <= 40) {
-            return "Bronze";
+            return this.nama="Bronze";
         } else if (nilai >= 41 && nilai <= 75) {
-            return "Silver";
+            return this.nama="Silver";
         } else if (nilai >= 76 && nilai <= 120) {
-            return "Gold";
+            return this.nama="Gold";
         } else if (nilai >= 121 && nilai <= 170) {
-            return "Platinum";
+            return this.nama="Platinum";
         } else {
             return null;
         }
