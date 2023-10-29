@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-//import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 
@@ -50,9 +49,6 @@ class KotakPermainan {
         for (int i = 0; i < jumlahMonster; i++) {
             acakMonster[i] = monsterList.get(i);
         }
-        // System.out.println("Urutan Koin yang Diacak: " + Arrays.toString(acakKoin));
-        // System.out.println("Urutan Monster yang Diacak: " + Arrays.toString(acakMonster));
-
     }
 
     private void inisialisasiKotak() {
@@ -66,8 +62,6 @@ class KotakPermainan {
                     String namaKoin = koin.getJenisKoinByNilai(nilaiKoin);
                     koin = new Koin(namaKoin, nilaiKoin);
                     kotak.addKoin(koin);
-                    //System.out.println(namaKoin);
-                    System.out.println("Koin ditempatkan pada kotak ke-" + i + " dengan nilai " + nilaiKoin);
                 }
             }
 
@@ -77,8 +71,6 @@ class KotakPermainan {
                     String namaMonster = monster.getJenisMonsterByNilai(nilaiMonster);
                     monster = new Monster(namaMonster, nilaiMonster);
                     kotak.addMonster(monster);
-                    //System.out.println(namaMonster);
-                    System.out.println("Monster ditempatkan pada kotak ke-" + i + " dengan nilai " + nilaiMonster);
                 }
             }
 
