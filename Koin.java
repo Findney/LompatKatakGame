@@ -1,8 +1,8 @@
 /**
  * Kelas Koin merepresentasikan objek koin dalam suatu permainan.
- * Koin merupakan turunan dari kelas Makhluk.
+ * Koin merupakan turunan dari kelas Entitas.
  */
-public class Koin extends Makhluk {
+public class Koin extends Entitas {
 
     /**
      * Konstruktor default untuk objek Koin.

@@ -1,7 +1,7 @@
 /**
- * Kelas Monster merupakan turunan dari kelas Makhluk, merepresentasikan monster dalam suatu permainan.
+ * Kelas Monster merupakan turunan dari kelas Entitas, merepresentasikan monster dalam suatu permainan.
  */
-public class Monster extends Makhluk {
+public class Monster extends Entitas {
 
     /**
      * Konstruktor default untuk objek Monster.
