@@ -1,16 +1,14 @@
 /**
- * Kelas Koin digunakan untuk merepresentasikan koin dengan nilai dan nama
- * tertentu.
+ * Kelas Koin merepresentasikan objek koin dalam suatu permainan.
+ * Koin merupakan turunan dari kelas Makhluk.
  */
-public class Koin {
-    private int nilai; // Nilai koin
-    private String nama; // Nama koin
+public class Koin extends Makhluk {
 
     /**
-     * Konstruktor default untuk kelas Koin.
+     * Konstruktor default untuk objek Koin.
      */
     public Koin() {
-        // Konstruktor default
+        // Kosong karena tidak ada inisialisasi khusus yang diperlukan.
     }
 
     /**
@@ -20,53 +18,26 @@ public class Koin {
      * @param nilai Nilai koin.
      */
     public Koin(String nama, int nilai) {
-        this.nama = nama;
-        this.nilai = nilai;
+        super(nama, nilai);
     }
 
     /**
-     * Mendapatkan nilai koin.
+     * Mengembalikan jenis nama koin berdasarkan nilai tertentu.
      *
-     * @return Nilai koin.
+     * @param nilai Nilai koin.
+     * @return Nama jenis koin (Bronze, Silver, Gold, Platinum) berdasarkan nilai.
+     *         Jika nilai tidak sesuai dengan kriteria, mengembalikan null.
      */
-    public int getNilai() {
-        return this.nilai;
-    }
-
-    /**
-     * Mengatur nilai koin.
-     *
-     * @param nilai Nilai koin yang akan diatur.
-     */
-    public void setNilai(int nilai) {
-        this.nilai = nilai;
-    }
-
-    /**
-     * Mendapatkan nama koin.
-     *
-     * @return Nama koin.
-     */
-    public String getNama() {
-        return nama;
-    }
-
-    /**
-     * Mendapatkan jenis koin berdasarkan nilai tertentu.
-     *
-     * @param nilai Nilai koin yang akan digunakan untuk menentukan jenis.
-     * @return Nama jenis koin (Bronze, Silver, Gold, Platinum) atau null jika nilai
-     *         tidak valid.
-     */
-    public String getJenisKoinByNilai(int nilai) {
+    @Override
+    public String getJenisNamaByNilai(int nilai) {
         if (nilai >= 1 && nilai <= 40) {
-            return this.nama="Bronze";
+            return this.nama = "Bronze";
         } else if (nilai >= 41 && nilai <= 75) {
-            return this.nama="Silver";
+            return this.nama = "Silver";
         } else if (nilai >= 76 && nilai <= 120) {
-            return this.nama="Gold";
+            return this.nama = "Gold";
         } else if (nilai >= 121 && nilai <= 170) {
-            return this.nama="Platinum";
+            return this.nama = "Platinum";
         } else {
             return null;
         }
