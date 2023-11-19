@@ -1,5 +1,5 @@
 
-// Link Video Penjelasan: 
+// Link Video Penjelasan: https://drive.google.com/file/d/1Bzr0LmC4Q8kv282GdrOP7ztQOtwvxHyX/view?usp=sharing
 
 /**
  * Ini adalah program permainan Katak Petualang. Katak akan bergerak di papan
