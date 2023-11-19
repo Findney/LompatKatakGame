@@ -79,7 +79,7 @@ class KotakPermainan {
             for (int j = 0; j < jumlahKoin; j++) {
                 if (i == acakKoin[j]) {
                     int nilaiKoin = generateNilaiKoin(pilihanLevel);
-                    String namaKoin = koin.getJenisKoinByNilai(nilaiKoin);
+                    String namaKoin = koin.getJenisNamaByNilai(nilaiKoin);
                     koin = new Koin(namaKoin, nilaiKoin);
                     kotak.addKoin(koin);
                 }
@@ -88,7 +88,7 @@ class KotakPermainan {
             for (int j = 0; j < jumlahMonster; j++) {
                 if (i == acakMonster[j]) {
                     int nilaiMonster = generateNilaiMonster(pilihanLevel);
-                    String namaMonster = monster.getJenisMonsterByNilai(nilaiMonster);
+                    String namaMonster = monster.getJenisNamaByNilai(nilaiMonster);
                     monster = new Monster(namaMonster, nilaiMonster);
                     kotak.addMonster(monster);
                 }
